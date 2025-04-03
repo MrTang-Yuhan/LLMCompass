@@ -6,7 +6,7 @@
 
 ### If using Github
 ```bash
-$ git clone -b ISCA_AE https://github.com/PrincetonUniversity/LLMCompass
+$ git clone -b main https://github.com/MrTang-Yuhan/LLMCompass.git
 $ cd LLMCompass
 $ git submodule init
 $ git submodule update --recursive
