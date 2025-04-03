@@ -32,7 +32,7 @@ $ pip3 install numpy==1.25.1
 conda env create -f  ./environment.yaml
 ```
 
-## AE Experiment workflow
+## AE Experiment workflow（测试样例）
 ```bash
 # Figure 5 (around 100 min) 
 $ cd ae/figure5
