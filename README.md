@@ -15,17 +15,17 @@ $ git submodule update --recursive
 ### Set up the environment（法1）
 
 ```bash
-conda create -n llmcompass_ae python=3.9
-conda activate llmcompass_ae
-pip3 install scalesim==2.0.2
-conda install pytorch==2.0.0 -c pytorch
-pip3 install matplotlib==3.9.4
-pip3 install seaborn==0.13.2
-pip3 install scipy==1.13.1
+$ conda create -n llmcompass_ae python=3.9
+$ conda activate llmcompass_ae
+$ pip3 install scalesim==2.0.2
+$ conda install pytorch==2.0.0 -c pytorch
+$ pip3 install matplotlib==3.9.4
+$ pip3 install seaborn==0.13.2
+$ pip3 install scipy==1.13.1
 # 删除numpy到干净为止
-pip3 uninstall numpy
-pip3 uninstall numpy
-pip3 install numpy==1.25.1
+$ pip3 uninstall numpy
+$ pip3 uninstall numpy
+$ pip3 install numpy==1.25.1
 ```
 ### Set up the environment（法2）（需要几分钟时间）
 ```bash
@@ -33,7 +33,7 @@ conda env create -f  ./environment.yaml
 ```
 
 ## AE Experiment workflow
-```
+```bash
 # Figure 5 (around 100 min) 
 $ cd ae/figure5
 $ bash run_figure5.sh 
