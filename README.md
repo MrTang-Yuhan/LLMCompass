@@ -2,55 +2,35 @@
 
 # LLMCompass
 
-This repository provides the implementation of **LLMCompass** from the following papers:
-
-[**LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference**](https://parallel.princeton.edu/papers/isca24_llmcompass.pdf)
-
-*Hengrui Zhang, August Ning, Rohan Baskar Prabhakar, David Wentzlaff*
-
-
-In the Proceedings of the 51st Annual International Symposium on Computer Architecture:
-
-```
-@inproceedings{LLMCompass,
-author = {Zhang, Hengrui and Ning, August and Prabhakar, Rohan Baskar and Wentzlaff, David},
-title = {LLMCompass: Enabling Efficient Hardware Design for Large Language Model Inference},
-year = {2024},
-booktitle = {Proceedings of the 51st Annual International Symposium on Computer Architecture},
-}
-```
-
-
-## Set up the environment
-
-```
-$ conda create -n llmcompass_ae python=3.9
-$ conda activate llmcompass_ae
-$ pip3 install scalesim
-$ conda install pytorch==2.0.0 -c pytorch
-$ pip3 install matplotlib
-$ pip3 install seaborn
-$ pip3 install scipy
-```
-
 ## Installation
 
 ### If using Github
-```
+```bash
 $ git clone -b ISCA_AE https://github.com/PrincetonUniversity/LLMCompass
 $ cd LLMCompass
 $ git submodule init
 $ git submodule update --recursive
 ```
 
-### If using Zenodo
-Unzip the file and download from https://github.com/PrincetonUniversity/ttm-cas.git as `cost_model\supply_chain`
+### Set up the environment（法1）
 
-
-### If using Docker
-A Dockerfile has been provided (`./Dockerfile`), including all the software dependencies and the LLMCompass source code.
-
-A docker image has been provided [here](https://github.com/HenryChang213/LLMCompass_ISCA_AE_docker).
+```bash
+conda create -n llmcompass_ae python=3.9
+conda activate llmcompass_ae
+pip3 install scalesim==2.0.2
+conda install pytorch==2.0.0 -c pytorch
+pip3 install matplotlib==3.9.4
+pip3 install seaborn==0.13.2
+pip3 install scipy==1.13.1
+# 删除numpy到干净为止
+pip3 uninstall numpy
+pip3 uninstall numpy
+pip3 install numpy==1.25.1
+```
+### Set up the environment（法2）（需要几分钟时间）
+```bash
+conda env create -f  ./environment.yaml
+```
 
 ## AE Experiment workflow
 ```
